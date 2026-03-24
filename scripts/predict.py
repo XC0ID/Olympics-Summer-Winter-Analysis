@@ -7,13 +7,16 @@ from src.data.loader      import load_all
 from src.data.cleaner     import clean_medals, clean_countries
 from src.features.builder import build_features, get_feature_cols
 
+# fix path
+BASE = Path(__file__).parent.parent
+
 def predict(country: str, year: int):
-    medals, countries = load_all()
+    medals, countries = load_all(config_path=str(BASE / "config/config.yaml"))
     medals    = clean_medals(medals)
     countries = clean_countries(countries)
-    features  = build_features(medals, countries).dropna()
+    features  = build_features(medals, countries)
     feat_cols = get_feature_cols(features)
-    model     = joblib.load("models/trained/regression_rf.pkl")
+    model     = joblib.load(BASE / "models/trained/regression_rf.pkl")
 
     row = features[(features["Country"] == country) & (features["Year"] == year)]
     X   = row[feat_cols].values[:1] if not row.empty else \
