@@ -1,0 +1,10 @@
+{
+  "regression": {
+    "rmse": 6.0173,
+    "mae": 3.0156,
+    "r2": 0.9543
+  },
+  "clustering": {
+    "silhouette": 0.7453
+  }
+}

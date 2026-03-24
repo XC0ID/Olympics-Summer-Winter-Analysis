@@ -1,0 +1,50 @@
+{
+  "regression": {
+    "rmse": 6.0173,
+    "mae": 3.0156,
+    "r2": 0.9543,
+    "rmse_mean": 10.52,
+    "rmse_std": 8.4319
+  },
+  "classification": {
+    "accuracy": 0.3211
+  },
+  "clustering_k_scores": {
+    "2": {
+      "inertia": 767.32,
+      "silhouette": 0.7453
+    },
+    "3": {
+      "inertia": 589.95,
+      "silhouette": 0.4765
+    },
+    "4": {
+      "inertia": 442.41,
+      "silhouette": 0.5562
+    },
+    "5": {
+      "inertia": 330.39,
+      "silhouette": 0.5648
+    },
+    "6": {
+      "inertia": 216.34,
+      "silhouette": 0.5746
+    },
+    "7": {
+      "inertia": 166.94,
+      "silhouette": 0.589
+    },
+    "8": {
+      "inertia": 148.7,
+      "silhouette": 0.5729
+    },
+    "9": {
+      "inertia": 132.16,
+      "silhouette": 0.5688
+    },
+    "10": {
+      "inertia": 114.79,
+      "silhouette": 0.5259
+    }
+  }
+}
