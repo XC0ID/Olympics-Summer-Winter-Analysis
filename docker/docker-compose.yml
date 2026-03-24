@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  train:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ../data:/app/data
+      - ../models:/app/models
+      - ../results:/app/results
+    command: python scripts/train.py
+```
+
+---
+
+## `logs/olympics.log`
+```
+Just create this as an empty file.
+It gets filled automatically when you run train.py
+```
+
+---
+
+## `results/reports/`
+```
+Just an empty folder.
+You can put your final PDF or Word reports here later.
